@@ -9,7 +9,20 @@ import SwiftUI
 
 struct Loading: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color("bgColor")
+                .ignoresSafeArea()
+            
+            VStack {
+                Spacer()
+                
+                Text("Loading...")
+                    .font(.custom("SFProDisplay-Semibold", size: 24))
+                    .foregroundColor(Color("text_1Color"))
+                    .padding(.bottom, 50)
+            }
+        }
+        .frame(height: screenHeight)
     }
 }
 
